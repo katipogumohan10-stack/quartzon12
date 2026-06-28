@@ -15,13 +15,7 @@ function Header() {
       <Container fluid>
 
         {/* Logo */}
-        <Navbar.Brand href="/" className="d-flex align-items-center">
-          <img
-            src={logo}
-            alt="Quartzon"
-            className="navbar-logo"
-          />
-        </Navbar.Brand>
+        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center"/>
 
         {/* Mobile Toggle */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -36,16 +30,16 @@ function Header() {
             ABOUT
             </Nav.Link>
 
-            <Nav.Link href="/services">
-              SERVICES
+            <Nav.Link as={Link} to="/services">
+            SERVICES
             </Nav.Link>
 
-            <Nav.Link href="/readmore">
-              READMORE
+            <Nav.Link as={Link} to="/readmore">
+             READMORE
             </Nav.Link>
 
-            <Nav.Link href="/contact">
-              CONTACT
+            <Nav.Link as={Link} to="/contact">
+            CONTACT
             </Nav.Link>
           </Nav>
 
