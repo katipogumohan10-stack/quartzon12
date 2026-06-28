@@ -1,0 +1,57 @@
+/* Slider Container */
+.carousel {
+    width: 100%;
+}
+
+/* Images */
+.slider-img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .slider-img {
+        height: 90vh;
+    }
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+    .slider-img {
+        height: 75vh;
+    }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .slider-img {
+        height: 60vh;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .slider-img {
+        height: 45vh;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .slider-img {
+        height: 35vh;
+    }
+}
