@@ -1,18 +1,20 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import ImageSlider from "./Imageslider";
 import About from "./About";
 import Contact from "./Contact";
 import Footer from "./Footer";
-import ScrollToTop from "./ScrollToTop";
 import Services from "./Services";
 import ReadMore from "./Readmore";
+import ScrollToTop from "./ScrollToTop";
+import "./App.css";
+
 function Home() {
   return (
     <>
       <ImageSlider />
       <About />
-       <ScrollToTop />
+      <ScrollToTop />
     </>
   );
 }
@@ -21,14 +23,54 @@ function App() {
   return (
     <>
       <Header />
+
       <Routes>
+
+        {/* Home Page */}
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/services" element={<Services/>}></Route>
-        <Route path="/readmore" element={<ReadMore/>}></Route>
+
+        {/* About Page */}
+        <Route
+          path="/about"
+          element={
+            <div className="inner-page">
+              <About />
+            </div>
+          }
+        />
+
+        {/* Services Page */}
+        <Route
+          path="/services"
+          element={
+            <div className="inner-page">
+              <Services />
+            </div>
+          }
+        />
+
+        {/* Read More Page */}
+        <Route
+          path="/readmore"
+          element={
+            <div className="inner-page">
+              <ReadMore />
+            </div>
+          }
+        />
+
+        {/* Contact Page */}
+        <Route
+          path="/contact"
+          element={
+            <div className="inner-page">
+              <Contact />
+            </div>
+          }
+        />
 
       </Routes>
+
       <Footer />
     </>
   );
